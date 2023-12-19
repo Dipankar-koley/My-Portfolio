@@ -34,6 +34,7 @@ body{
 }
 
 .navbar a{
+    display: inline-block;
     font-size: 16px;
     color: rgb(176, 115, 1);
     text-decoration: none;
@@ -42,6 +43,7 @@ body{
     transition: .3s;
     opacity: 0;
     animation:slideTop .5s ease forwards;
+    animation-delay: calc(.1s * var(--i));
 }
 .navbar a:hover,
 .navbar a.active{
@@ -65,29 +67,40 @@ body{
 .home-content h3{
     font-size: 32px;
     font-weight: 700;
+    animation:slideBottom 1s ease forwards;
+    animation-delay: .5s;
 
 }
 .home-content h3:nth-of-type(2){
     margin-bottom: 30px;
+    animation:slideTop 1s ease forwards;
+    animation-delay: .5s;
 }
 
 .home-content h1{
     font-size:56px ;
     font-weight: 700;
     margin: -3px;
+    animation:slideRight 1s ease forwards;
+    animation-delay: .5s;
 }
 
 .home-content p{
     font-size: 15px;
+    animation:slideLeft 1s ease forwards;
+    animation-delay: .5s;
 }
 
 .home-content h3 span{
     color: aqua;
 }
 
-/* .home-img a{
-    max-width: fit-content;
-} */
+.home-img a{
+    max-width: min-content;
+    /* opacity: 0;
+    animation:zoomIn 1s ease forwards;
+    animation-delay: 2s; */
+}
 
 .social-media a{
     display: inline-flex;
@@ -103,6 +116,9 @@ body{
     text-decoration: none;
     margin: 30px 15px 30px 0;
     transition: .5s ease;
+    opacity: 0;
+    animation:slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 
 .social-media a:hover{
@@ -123,6 +139,9 @@ body{
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
+    opacity: 0;
+    animation:slideTop 1s ease forwards;
+    animation-delay: 2s;
 }
 /* keyframes online */
 
@@ -137,9 +156,9 @@ body{
         }
 
     }
-    @keyframes slideTop {
+    @keyframes slideLeft {
         0% {
-            transform: translateY(100px);
+            transform: translateX(100px);
             opacity: 0;
         }
         100%{
@@ -148,3 +167,37 @@ body{
         }
 
     }
+    @keyframes slideTop {
+        0% {
+            transform: translateY(100px);
+            opacity: 0;
+        }
+        100%{
+            transform:  translateY(0);
+            opacity: 1;
+        }
+
+    }
+
+    @keyframes slideBottom {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        100%{
+            transform:  translateY(0);
+            opacity: 1;
+        }
+
+    }
+    /* @keyframes zoomIn {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+        100%{
+            transform:  scale(1);
+            opacity: 1;
+        }
+
+    } */
