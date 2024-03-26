@@ -16,7 +16,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;
+    padding: 10px 5%;
     background: transparent;
     display: flex;
     justify-content: space-between;
@@ -24,10 +24,10 @@ body{
     z-index: 100;
 }
 .logo{
-    font-size: 25px;
+    font-size: 35px;
     color: aliceblue;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     cursor: default;
     opacity: 0;
     animation:slideRight 1s ease forwards;
@@ -211,3 +211,140 @@ body{
           height: 20px; */
         }
       }
+
+.about{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        background: fixed;
+        padding-bottom: 10rem;
+        border-radius:10rem 10rem 0 0;
+}
+
+.heading{
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    
+    
+}
+
+.about-img{
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img{
+    width: 100%;
+    border-radius: 50%;
+    border: 0.2rem solid;
+}
+/* .about-img .circle-spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%) rotate(0);
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    border-top: .2rem solid;
+    border-bottom: .2rem solid;
+    border-left: .2rem solid;
+    border-right: .2rem solid;
+
+} */
+
+.about-content{
+    text-align: center;
+}
+
+.about-content h3{
+    font-size: 2rem;
+}
+
+.about-content p{
+    font-size: 1rem;
+    margin: 1rem 0 0 1rem;
+}
+.btn-box btns{
+    display: inline-block;
+    width: 15rem;
+}
+.btn-box.btns{
+    background: var(--second-bg-color);
+}
+
+.education{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 15rem;
+
+}
+
+.education .education-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.education-row .education-column{
+    flex: 1 1 40rem;
+}
+
+.education-column .title{
+    font-size: 1.5rem;
+    margin: 0 0 1rem 2rem;
+}
+
+.education-column .education-box {
+    border-left: .2rem solid rgb(0, 170, 255);
+}
+.education-box .education-content{
+    position: relative;
+    padding-left: 1rem;
+}
+.education-box .education-content::before{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: rgb(0, 170, 255);
+    border-radius: 50%;
+
+}
+
+.education-content .content {
+    position: relative;
+    padding: 1rem;
+    border: .2rem solid rgb(0, 170, 255);
+    border-radius: .6rem;
+    margin-bottom: 1rem;
+}
+
+.education-content .content .year{
+    font-size: 1.5rem;
+    color: rgb(0, 170, 255);
+    padding-bottom: .5rem;
+}
+.education-content .content .year i{
+    padding-right: .5rem;
+}
+.education-content .content .year h3{
+    font-size: 2rem;
+}
+.education-content .content .year p{
+    font-size: 2rem;
+    padding-top: .5rem;
+}
